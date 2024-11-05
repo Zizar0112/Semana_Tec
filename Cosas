@@ -1,0 +1,48 @@
+###############Problem 1
+
+print("Armstrong numbers between 100 and 999 are:")
+
+for num in range (100, 1000):
+    digits = [int(d) for d in str(num)]
+    if sum (d ** 3 for d in digits) == num:
+        print(num)
+
+###############Problem 2
+
+def cycle (num, times):
+    total = 0
+    result = ""
+    for i in range (1, times + 1):
+        result += str(num)
+        total += int(result)                                
+    print(f"The sum of the digit {num} repeated {times} times is: {total}")
+
+num = int(input("Type an alphanumeric symbol: "))
+times = int(input("How many times you want to repeat it: "))
+
+cycle(num, times)
+
+###############Problem 3
+
+distance = 0
+final_height = 100
+
+for bounces in range (1, 11):
+    
+    distance += final_height
+    final_height /=2
+
+    if bounces < 10:
+        distance += final_height
+
+print(f"The distance that traveled after bouncing 10 times is: {distance}")
+
+###############Problem 4
+
+total = 1
+
+for peaches in range (1, 11):
+    total += 1
+    total *= 2
+
+print(f"Total of peaches on the first day is: {total}")
